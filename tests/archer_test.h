@@ -14,7 +14,7 @@ extern "C++" {
 
 
 TEST(arrow_of_archer, onDistance){
-    cout << alive;
+    alive = true;
     sf::Texture t;
     t.loadFromFile(SPRITE"/ninja.png");
 
@@ -34,7 +34,7 @@ TEST(arrow_of_archer, onDistance){
 }
 
 TEST(arrow_of_archer, shots){
-    cout << alive;
+    alive = true;
     sf::Texture t;
     t.loadFromFile(SPRITE"/ninja.png");
 
