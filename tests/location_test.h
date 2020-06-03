@@ -60,9 +60,9 @@ TEST(location, colRight){
     PLAYER p(t, a);
 
     p.rect.left = 1504;
-    p.rect.top = 672;
+    p.rect.top = 640;
 
-    ASSERT_EQ(p.Collision(0), 0);
+    ASSERT_EQ(p.Collision(0), 1);
     ASSERT_EQ(p.rect.left, 1408);
 
 }
