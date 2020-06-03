@@ -59,10 +59,13 @@ TEST(location, colRight){
 
     PLAYER p(t, a);
 
-    p.rect.left = 1472;
+    p.rect.left = 1504;
     p.rect.top = 640;
-
-    ASSERT_EQ(p.Collision(0), 1);
+    int test = p.rect.left;
+    while(test == p.rect.left){
+        ASSERT_EQ(p.Collision(0), 1);
+        if (test != p.rect.left) test = p.rect.left; else test = 0;
+    }
     ASSERT_EQ(p.rect.left, 1440);
 
 }
