@@ -27,6 +27,28 @@ TEST(location, start_position){
 
     ASSERT_EQ(p.Collision(0), 1);
     ASSERT_EQ(p.Collision(1), 1);
+    ASSERT_EQ(alive, true);
+}
+
+TEST(location, insideTexture){
+    sf::Texture t;
+    t.loadFromFile(SPRITE"/ninja.png");
+
+    sf::Texture a;
+    a.loadFromFile(SPRITE"/archer.png");
+
+    PLAYER p(t, a);
+
+    p.rect.left = 96;
+    p.rect.top = 480;
+
+    ASSERT_EQ(p.Collision(0), 1);
+    ASSERT_EQ(p.Collision(1), 1);
+
+    ASSERT_EQ(p.rect.top, 416);
+    ASSERT_EQ(p.rect.left, 96);
+    ASSERT_EQ(alive, true);
+
 }
 
 TEST(location, negative){
@@ -43,6 +65,7 @@ TEST(location, negative){
 
     ASSERT_EQ(p.Collision(0), 0);
     ASSERT_EQ(p.Collision(1), 0);
+    ASSERT_EQ(alive, false);
 }
 
 #endif // LOCATION_TEST_H
