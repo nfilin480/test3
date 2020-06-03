@@ -22,6 +22,7 @@ TEST(arrow_of_archer, onDistance){
     PLAYER p(t, a);
 
     p.rect.left = 516;
+    p.rect.top = 96;
 
     for ( float time = 10; time < 100; time+=5){
         p.enemy_archer(time, 0);
@@ -41,8 +42,9 @@ TEST(arrow_of_archer, shots){
 
 
     p.rect.left = 672;
+    p.rect.top = 96;
 
-    for ( float time = 10; time < 100; time+=5){
+    for ( float time = 100; time < 3000; time+=100){
         p.enemy_archer(time, 0);
     }
 
