@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "location_test.h"
+#include "archer_test.h"
 
 int main(int argc, char *argv[])
 {
