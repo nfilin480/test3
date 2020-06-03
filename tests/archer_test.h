@@ -8,6 +8,7 @@
 
 extern "C++" {
 #include "../app/helper.h"
+#include "../app/global_vars.h"
 }
 
 
