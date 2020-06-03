@@ -66,7 +66,7 @@ TEST(location, colRight){
         ASSERT_EQ(p.Collision(0), 1);
         if (test != p.rect.left) test = p.rect.left; else test = 0;
     }
-    ASSERT_EQ(p.rect.left, 1440);
+    ASSERT_EQ(p.rect.left, 1408);
 
 }
 

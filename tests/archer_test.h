@@ -21,15 +21,7 @@ TEST(arrow_of_archer, first){
 
     PLAYER p(t, a);
 
-    p.rect.left = 96;
-    p.rect.top = 480;
 
-    ASSERT_EQ(p.Collision(0), 1);
-    ASSERT_EQ(p.Collision(1), 1);
-
-    ASSERT_EQ(p.rect.top, 416);
-    ASSERT_EQ(p.rect.left, 96);
-    ASSERT_EQ(alive, true);
 
 }
 
