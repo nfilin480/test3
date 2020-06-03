@@ -26,7 +26,7 @@ TEST(arrow_of_archer, onDistance){
     for ( float time = 10; time < 100; time+=5){
         p.enemy_archer(time, 0);
     }
-    ASSERT_EQ(p.index_arrows.size(), 0);
+    ASSERT_EQ((int)p.index_arrows.size(), 0);
     ASSERT_EQ(alive, true);
 }
 
