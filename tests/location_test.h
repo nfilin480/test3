@@ -60,7 +60,7 @@ TEST(location, colRight){
     PLAYER p(t, a);
 
     p.rect.left = 1504;
-    p.rect.top = 640;
+    p.rect.top = 608;
     int test = p.rect.left;
     while(test == p.rect.left){
         ASSERT_EQ(p.Collision(0), 1);
