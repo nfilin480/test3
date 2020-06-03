@@ -41,14 +41,14 @@ TEST(arrow_of_archer, shots){
     PLAYER p(t, a);
 
 
-    p.rect.left = 672;
-    p.rect.top = 96;
+    p.rect.left = 608;
+    p.rect.top = 256;
 
     for ( float time = 100; time < 3000; time+=100){
         p.enemy_archer(time, 0);
     }
 
-    ASSERT_EQ((int)p.index_arrows.size(), 2);
+    ASSERT_EQ((int)p.index_arrows.size(), 11);
     ASSERT_EQ(alive, true);
 
 }
