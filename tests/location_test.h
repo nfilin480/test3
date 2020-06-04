@@ -11,8 +11,6 @@ extern "C++" {
 #include "../app/global_vars.h"
 }
 
-
-
 TEST(location, start_position){
     sf::Texture t;
     t.loadFromFile(SPRITE"/ninja.png");
