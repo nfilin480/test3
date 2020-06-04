@@ -55,7 +55,7 @@ TEST(arrow_of_archer, shots){
         time = time + 100;
     }
 
-    ASSERT_EQ((int)p.index_arrows.size(), 11);
+    ASSERT_EQ((int)p.index_arrows.size(), 12);
     ASSERT_EQ(alive, true);
 
 }
