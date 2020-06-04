@@ -22,6 +22,7 @@ TEST(update, jump){
     p.rect.left = 32;
     p.rect.top = 416;
 
+    p.dx = 0;
     p.dy = -0.3;
     p.onGround = false;
     for (float time = 100; time < 3000; time+=100)
