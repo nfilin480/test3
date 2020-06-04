@@ -44,7 +44,7 @@ TEST(update, negative){
 
     p.dx = 0;
     p.dy = 0.3;
-    p.onGround = false;
+    p.onGround = true;
     for (float time = 100; time < 3000; time+=100)
         p.update(time);
     ASSERT_EQ(p.rect.left, 32);
