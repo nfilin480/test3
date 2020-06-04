@@ -29,6 +29,8 @@ TEST(location, start_position){
     ASSERT_EQ(p.Collision(0), 1);
     ASSERT_EQ(p.Collision(1), 1);
     ASSERT_EQ(alive, true);
+    ASSERT_EQ(p.rect.left, 32);
+    ASSERT_EQ(p.rect.top, 416);
 }
 
 TEST(location, insideTexture){
@@ -68,6 +70,7 @@ TEST(location, colRight){
         if (test != p.rect.left) test = p.rect.left; else test = 0;
     }
     ASSERT_EQ(p.rect.left, 1408);
+    ASSERT_EQ(alive, true);
 
 }
 

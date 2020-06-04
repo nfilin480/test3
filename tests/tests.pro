@@ -25,8 +25,8 @@ DEFINES += SPRITE=\\\"$$PWD/../app/sprites\\\" \
 
 HEADERS +=      \ \
     archer_test.h \
-    load_test.h \
-    location_test.h
+    location_test.h \
+    update_test.h
 
 SOURCES +=  main.cpp
 

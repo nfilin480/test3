@@ -95,6 +95,7 @@ public:
     }
 
     void enemy_archer(float time,int i) {
+        if (time < 0) return;
         int flag = 0;
         frame_archer += 0.001 * time;
         if (frame_archer >= 10) {

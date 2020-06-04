@@ -56,4 +56,26 @@ TEST(arrow_of_archer, shots){
 
 }
 
+TEST(arrow_of_archer, negative){
+    alive = true;
+    sf::Texture t;
+    t.loadFromFile(SPRITE"/ninja.png");
+
+    sf::Texture a;
+    a.loadFromFile(SPRITE"/archer.png");
+
+    PLAYER p(t, a);
+
+
+    p.rect.left = 608;
+    p.rect.top = 256;
+
+    for ( float time = -100; time > -3000; time-=100){
+        p.enemy_archer(time, 0);
+    }
+
+    ASSERT_EQ((int)p.index_arrows.size(), 0);
+    ASSERT_EQ(alive, true);
+
+}
 #endif // ARCHER_TEST_H
