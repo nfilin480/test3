@@ -26,8 +26,10 @@ TEST(arrow_of_archer, onDistance){
     p.rect.left = 516;
     p.rect.top = 96;
 
-    for ( float time = 10; time < 100; time+=5){
+    float time = 10;
+    for (int i = 0; i < 10; i++){
         p.enemy_archer(time, 0);
+        time = time + 10;
     }
     ASSERT_EQ((int)p.index_arrows.size(), 0);
     ASSERT_EQ(alive, true);
@@ -47,8 +49,10 @@ TEST(arrow_of_archer, shots){
     p.rect.left = 608;
     p.rect.top = 256;
 
-    for ( float time = 100; time < 3000; time+=100){
+    float time = 100;
+    for (int i = 0; i < 30; i++){
         p.enemy_archer(time, 0);
+        time = time + 100;
     }
 
     ASSERT_EQ((int)p.index_arrows.size(), 11);
@@ -70,8 +74,10 @@ TEST(arrow_of_archer, negative){
     p.rect.left = 608;
     p.rect.top = 256;
 
-    for ( float time = -100; time > -3000; time-=100){
+    float time = -100;
+    for (int i = 0; i < 30; i++){
         p.enemy_archer(time, 0);
+        time = time - 100;
     }
 
     ASSERT_EQ((int)p.index_arrows.size(), 0);

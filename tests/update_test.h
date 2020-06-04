@@ -25,8 +25,11 @@ TEST(update, jump){
     p.dx = 0;
     p.dy = -0.3;
     p.onGround = false;
-    for (float time = 100; time < 3000; time+=100)
+    float time = 100;
+    for (int i = 0; i < 30; i++){
         p.update(time);
+        time = time + 100;
+    }
     ASSERT_EQ(p.rect.left, 32);
 
 }
@@ -46,8 +49,11 @@ TEST(update, negative){
     p.dy = 0.3;
     p.onGround = true;
     alive = true;
-    for (float time = 100; time < 3000; time+=100)
+    float time = 100;
+    for (int i = 0; i < 30; i++){
         p.update(time);
+        time = time + 100;
+    }
     ASSERT_EQ(p.rect.left, 32);
     ASSERT_EQ(alive, false);
 
